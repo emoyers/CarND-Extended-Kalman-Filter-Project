@@ -98,9 +98,6 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
       vx = ro_dot * cos(theta);
       vy = ro_dot * sin(theta);
 
-      if ( px < 0.0001 ) px = 0.0001;
-      if ( py < 0.0001 ) py = 0.0001;
-
     }
     else if (measurement_pack.sensor_type_ == MeasurementPackage::LASER) {
       // TODO: Initialize state.
